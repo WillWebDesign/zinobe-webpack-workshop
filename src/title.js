@@ -1,4 +1,5 @@
 const { getRandomColor } = require("./color.js");
+const image = require("../assets/landscape.jpg").default;
 
 let changeCount = 0;
 
