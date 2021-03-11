@@ -8,10 +8,17 @@ module.exports = {
   },
   module: {
     rules: [
-      // Here we can define/override module loading rules
       {
         test: /\.jpg$/,
-        use: ["file-loader"]
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              outputPath: "assets",
+              publicPath: "dist/assets"
+            }
+          }
+        ]
       }
     ]
   }
