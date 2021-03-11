@@ -18,6 +18,7 @@
     "webpack-dev-server": "^3.1.14"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build:source-map": "webpack --progress --mode development --devtool inline-source-map"
   }
 }

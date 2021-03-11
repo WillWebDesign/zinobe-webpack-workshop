@@ -2,6 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  mode: "development",
+  devtool: "inline-source-map",
   entry: "./src/main.js", // The source module of our dependency graph
   output: {
     // Configuration of what we tell webpack to generate (here, a ./dist/main.js file)
