@@ -5,6 +5,11 @@ let changeCount = 0;
 
 const el = document.querySelector("h1");
 
+const img = document.createElement("img");
+img.src = image;
+
+el.parentNode.insertBefore(img, el.nextSibling);
+
 setInterval(() => {
   changeCount++;
   el.innerHTML = `This title will change ! ${changeCount}`;
