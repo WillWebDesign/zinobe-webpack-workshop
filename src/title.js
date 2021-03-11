@@ -1,4 +1,5 @@
 const { getRandomColor } = require("./color.js");
+require("../assets/main.css");
 
 let changeCount = 0;
 
