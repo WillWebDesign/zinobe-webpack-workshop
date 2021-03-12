@@ -1,8 +1,6 @@
-require("bulma/css/bulma.css");
-const _ = require("lodash");
-
-const PokemonComponent = require("./pokemon.component");
-const { getPokemons } = require("./pokemon.service");
+import "bulma/css/bulma.css";
+import PokemonComponent from "./pokemon.component";
+import { getPokemons } from "./pokemon.service";
 
 const pokemonList = document.querySelector("#pokemons");
 

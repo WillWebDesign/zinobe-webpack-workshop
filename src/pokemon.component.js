@@ -1,4 +1,6 @@
-module.exports = (name, id) => {
+import _ from "lodash";
+
+export default (name, id) => {
   const pokemonRoot = document.createElement("div");
   pokemonRoot.classList.add("column");
   pokemonRoot.classList.add("is-2");
