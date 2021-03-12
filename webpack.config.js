@@ -1,6 +1,15 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+class BuildTime {
+  apply(compiler) {
+    compiler.hooks.done.tapAsync("StatsFilePlugin", stats => {
+      console.log(
+        `Build took ${stats.endTime - stats.startTime} milliseconds!`
+      );
+    });
+  }
+}
 
 module.exports = {
   entry: "./src/main.js", // The source module of our dependency graph
@@ -41,6 +50,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new BuildTime()
   ]
 };
