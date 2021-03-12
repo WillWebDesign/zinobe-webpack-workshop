@@ -19,6 +19,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "build:source-map": "webpack --progress --mode development --devtool inline-source-map --watch"
+    "build:source-map": "webpack --progress --mode development --devtool inline-source-map --watch",
+    "start": "webpack-dev-server"
   }
 }

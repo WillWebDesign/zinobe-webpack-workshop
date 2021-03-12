@@ -2,6 +2,9 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+  devServer: {
+    contentBase: "./dist"
+  },
   watch: true,
   mode: "development",
   devtool: "inline-source-map",
