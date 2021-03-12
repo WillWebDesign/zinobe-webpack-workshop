@@ -5,10 +5,10 @@ Vue.use(Router);
 
 export default new Router({
   routes: [
-    { path: "/", component: () => import(/* webpackChunkName: "home" */ "./pages/home.vue") },
+    { path: "/", component: () => import("./pages/home.vue") },
     {
       path: "/details/:id",
-      component: () => import(/* webpackChunkName: "home" */"./pages/details.vue"),
+      component: () => import("./pages/details.vue"),
       props: true
     }
   ]
