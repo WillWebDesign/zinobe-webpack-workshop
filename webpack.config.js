@@ -1,8 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
-  .BundleAnalyzerPlugin;
 
 module.exports = {
   entry: "./src/main.js", // The source module of our dependency graph
@@ -11,7 +9,7 @@ module.exports = {
   },
   output: {
     // Configuration of what we tell webpack to generate (here, a ./dist/main.js file)
-    filename: "[name].bundle.js",
+    filename: "main.bundle.js",
     path: path.resolve(__dirname, "dist")
   },
   module: {
@@ -43,7 +41,6 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    }),
-    new BundleAnalyzerPlugin()
+    })
   ]
 };
