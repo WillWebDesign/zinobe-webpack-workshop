@@ -1,4 +1,4 @@
-import _ from "lodash";
+import _capitalize from "lodash/capitalize";
 
 export default {
   name: "Pokemon",
