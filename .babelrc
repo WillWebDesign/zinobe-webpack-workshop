@@ -3,11 +3,7 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "esmodules": true
-        },
-        "useBuiltIns": "usage",
-        "debug": true
+        "useBuiltIns": "usage"
       }
     ]
   ],
