@@ -1,11 +1,13 @@
-import "bulma/bulma.sass";
-import PokemonComponent from "./pokemon.component";
-import { getPokemons } from "./pokemon.service";
+import Vue from "vue";
+import VueRouter from "vue-router";
+import router from "./router";
+import App from "./app.vue";
 
-const pokemonList = document.querySelector("#pokemons");
+import "./app.sass";
 
-getPokemons().then(response => {
-  response.results.map(({ name }, index) => {
-    pokemonList.appendChild(PokemonComponent(name, index + 1));
-  });
-});
+Vue.use(VueRouter);
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount("#app");
