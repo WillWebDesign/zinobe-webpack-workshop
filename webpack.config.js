@@ -25,7 +25,21 @@ module.exports = {
       },
       {
         test: /\.sass$/,
-        use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader", "sass-loader"]
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ["IE >= 10", "last 2 versions", "chrome >= 28"]
+                })
+              ]
+            }
+          },
+          "sass-loader"
+        ]
       }
     ]
   },
